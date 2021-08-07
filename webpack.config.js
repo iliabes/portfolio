@@ -14,7 +14,8 @@ module.exports = smp.wrap({
   devtool: 'eval',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 3000,
+    host: '192.168.43.251', 
+    port: 8080,
     open: true,
   },
   module: {
@@ -45,7 +46,14 @@ module.exports = smp.wrap({
           },
         ],
       },
-    ],
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({

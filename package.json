@@ -6,7 +6,8 @@
     "git:commit": "cz",
     "build": "./node_modules/.bin/webpack",
     "build:watch": "./node_modules/.bin/webpack --watch",
-    "serve": "./node_modules/.bin/webpack serve"
+    "serve": "./node_modules/.bin/webpack serve",
+    "dev": "webpack-dev-server --host 192.168.43.251"
   },
   "repository": {
     "type": "git",
@@ -46,9 +47,10 @@
     "style-loader": "^3.2.1",
     "webpack": "^5.48.0",
     "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.1"
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "css": "^3.0.0",
     "jquery": "^3.5.1",
     "normalize": "^0.3.1",
