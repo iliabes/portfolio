@@ -1,0 +1,236 @@
+body
+    background-color: $back
+    font-family: 'Roboto' , sans-serif
+
+.top-menu
+    display: block
+    height: 10vh
+    background-color: $black
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .humb-menu
+        font-size: 20px
+        color: $white
+        margin-left: 140px
+        display: none
+
+    .logo
+        font-size: 20px
+        color: $white
+        margin-left: 3%
+    .top-item
+        font-size: 16px
+        display: flex   
+        color: #FFFFFF
+        p
+            margin-right: 105px
+            transition: 1s
+            &:hover
+                color: $violet
+
+.about
+    .cont
+        // height: 90vh
+        background-color: $back2 
+        display: grid
+        padding-bottom: 140px
+        grid-template-columns: 1fr 4fr 1fr 5fr 1fr
+        grid-gap: 10px
+        grid-template-areas:  ". . heading . ." ". curcleImg . textblock1 ." ". curcleImg . textblock2 ." ". . . textblock3 ." ". project project project ." 
+        .heading
+            grid-area: heading
+            font-size: 36px
+            color: gold
+            position: relative
+            margin-left: 40px
+            font-family: Roboto
+            margin: 30px 0
+            &::before
+                content: '<'
+                position: absolute
+                left: -28%
+                display: block
+                width: 25px
+                height: 25px
+                color:#ffffff
+            &::after
+                content: '>'
+                position: absolute
+                left: 108%
+                top: 0
+                display: block
+                color:#ffffff
+        .heading-close
+            grid-area: heading-close
+            font-size: 36px
+            color: $gold
+            position: relative
+            margin-left: 40px
+            font-family: Roboto
+            display: none
+            &::before
+                content: '< /'
+                width: 60px
+                position: absolute
+                left: -40px
+                display: block
+                color:#ffffff
+            &::after
+                content: '>'
+                position: absolute
+                left: 100px
+                top: 0
+                display: block
+                color:#ffffff
+        .curcle-img
+            grid-area: curcleImg
+            display: inline-block
+            img
+                border-radius: 50%
+                box-shadow: 5px 5px 3px 0 black
+        .block-text
+            border: 1px solid $violet
+            box-shadow: 5px 5px 3px 0 black
+            padding: 2%
+            p
+                font-size: 21px
+        .block-text1
+            grid-area: textblock1
+        .block-text2
+            grid-area: textblock2
+        .block-text3
+            grid-area: textblock3
+        .heading-close
+            grid-area: heading-close
+
+//----------------------
+
+
+
+//media-------------------------------------------------
+//monitor
+@media (min-width: 1240px)  
+        .block-text
+            margin-left: 1%
+        .heading-close
+            display: none
+
+
+
+//tablet ----------------
+@media (min-width: 1024px) and (max-width: 1240px)
+    .top-menu
+        .logo
+            // margin-left: 2%
+        .top-item
+            p
+                margin-right: 94px
+
+    .about .cont .curcle-img img
+        width: 330px
+    .heading
+        margin-left: 0
+        background-color: red
+
+//phablet
+@media (min-width: 768px) and (max-width: 1024px) 
+    .top-menu
+        height: 40px
+        .logo
+            margin-left: 3%
+        .humb-menu
+            display: block
+            margin-right: 3%
+        .top-item
+            display: none
+
+    .about
+        .cont
+            padding: 0 15px
+            align-items: stretch
+            justify-items: center
+            grid-template-columns: 1fr 
+            grid-auto-rows: auto
+            grid-template-areas:  "  heading  " " curcleImg  " "  textblock1 " " textblock2 " "textblock3 " "heading-close"
+            .heading ,.heading-close
+                font-size: 24px
+                margin-left: -7%
+                background-color: #78909c
+            .curcle-img
+                img
+                    width: 200px
+                    height: 200px
+            .block-text
+                p
+                    font-size: 14px
+
+@media (min-width: 568px) and (max-width: 1024px) 
+    .top-menu
+        height: 30px
+        .logo
+            margin-left: 3%
+        .humb-menu
+            display: block
+            margin-right: 3%
+        .top-item
+            display: none
+
+    .about
+        .cont
+            height: 100vh
+            padding: 0 15px
+            align-items: stretch
+            justify-items: center
+            grid-template-columns: 1fr 
+            grid-auto-rows: auto
+            grid-template-areas:  "  heading  " " curcleImg  " "  textblock1 " " textblock2 " "textblock3 " "heading-close"
+            .heading ,.heading-close
+                display: block
+                font-size: 24px
+                margin-left: -7%
+                background-color: #78909c
+            .heading-close
+                margin-bottom: 4%
+            .curcle-img
+                img
+                    width: 200px
+                    height: 200px
+            .block-text
+                p
+                    font-size: 14px
+
+@media (max-width: 568px) 
+    body 
+        .top-menu
+            height: 30px
+            .logo
+                margin-left: 3%
+            .humb-menu
+                display: block
+                margin-right: 3%
+            .top-item
+                display: none
+
+                
+        .about
+            .cont
+                height: 90vh
+                padding: 0 15px
+                align-items: stretch
+                justify-items: center
+                grid-template-columns: 1fr 
+                grid-auto-rows: auto
+                grid-template-areas:  "  heading  " " curcleImg  " "  textblock1 " " textblock2 " "textblock3 " "heading-close"
+                .heading ,.heading-close
+                    display: block
+                    font-size: 24px
+                    background-color: #ffea00
+                    margin-left: 0px
+                .curcle-img
+                    img
+                        width: 150px
+                        height: 150px
+                .block-text
+                    p
+                        font-size: 14px
