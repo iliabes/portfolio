@@ -1,3 +1,62 @@
 .project
     grid-area: project
     background-color: red
+
+.pojects-cont-right , .pojects-cont-left
+    width: 100%
+    display: flex
+    justify-content: space-between
+    .cont-img
+        .overlay
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                // width:  35vw
+                // height: 30vh
+                width: 100%
+                height: 99%
+                background-color: grey
+                opacity: .4
+                border-radius: 15px
+                transition: .5s
+            .img-portfolio 
+                border-radius: 2px
+                width:  35vw
+                height: 30vh
+                border-radius: 15px
+            .sign-img
+                color: #ffffff
+                position: absolute
+                top: 0
+                left: 0
+                margin-left: 5%
+                font-size: 40px
+                text-align: center
+            &:hover::before
+                opacity: 0
+            &:hover::.sign-img
+                color: red
+                
+
+    .cont-sign
+        width:  450px
+        height: 180px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 0
+        .sign-project
+            margin: 0
+            font-size: 30px
+           
+        .cont-techologi
+            .techologi
+                display: inline-flex
+                background-color: $red
+                border-radius: 5px
+
+
+
+
+
