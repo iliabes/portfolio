@@ -6,6 +6,7 @@
     width: 100%
     display: flex
     justify-content: space-between
+    margin-top: 10px
     .cont-img
         .overlay
             position: relative
@@ -26,35 +27,59 @@
             .sign-img
                 color: #ffffff
                 position: absolute
-                top: 0
-                left: 0
-                margin-left: 5%
+                margin-left: 20px
+                margin-top: 5px
                 font-size: 40px
                 text-align: center
             &:hover::before
                 opacity: 0
 
 
+
+
     .cont-sign
-        width:  450px
-        height: 180px
         display: flex
         flex-direction: column
         justify-content: space-between
         padding: 0
+        width: 40vw
         .sign-project
             margin: 0
-            font-size: 30px
-           
+            font-size: calc(1rem + 1.23vw)
         .cont-techologi
-            display: inline-block
-            // float: right
+            display: flex
+            flex-direction: row
+            justify-content: flex-end
+            flex-wrap: wrap
             .techologi
-                display: inline-flex
                 background-color: $red
                 border-radius: 5px
+                margin-right: 2px
+                margin-top: 2px
+                p
+                    margin: 0
+                    padding: 2px
 
 
+.pojects-cont-left .cont-sign .cont-techologi
+    justify-content: flex-start
+
+@media (min-width: 1024px) and (max-width: 1240px)
 
 
+@media (min-width: 768px) and (max-width: 1024px)
 
+@media (min-width: 568px) and (max-width: 1024px)
+
+@media (max-width: 568px)
+    .pojects-cont-right .cont-sign .sign-project , .pojects-cont-left .cont-sign .sign-project
+       
+    .pojects-cont-right .cont-img .overlay .img-portfolio, .pojects-cont-left .cont-img .overlay .img-portfolio
+        width: 50vw
+        height: 22vh
+
+    .pojects-cont-right .cont-sign, .pojects-cont-left .cont-sign
+        width: 32vw
+    
+    .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
+        font-size: 1rem
