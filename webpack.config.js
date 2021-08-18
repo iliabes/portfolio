@@ -14,7 +14,7 @@ module.exports = smp.wrap({
   devtool: 'eval',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    host: '192.168.43.251',
+    host: '192.168.43.249',
     port: 8080,
     open: true,
   },

@@ -1,27 +1,33 @@
 .contacts
     .quet
         color: $violet
-        font-size: 21px
+        font-size: 2.4rem
+        text-decoration: underline
+        width: 100%
+        text-align: start
     .cont-input
+        position: relative
         display: flex
         flex-direction: column
         margin-top: 35px
-        width: 84%
+        width: 98%
         .text-inp
             background-color: #3C253E
             width: 100%
             border: none
             border-bottom: 1px solid $violet
             height: 35px
-            
+            padding:  0 2%
+            box-sizing: border-box  
         .label-input
             position: absolute
-            left: 88px
+            left: 0
             color: rgb(63,75,180)
             font-size: 12px
             margin-top: 11px
         .area
             height: 105px
+
         .submit
             margin-top: 20px
             border: 1px solid #6850d2
@@ -29,8 +35,9 @@
             border-radius: 5px
             background-color: #3F4BB4
             align-self: flex-end
-            color: #6850d2
+            color: #fff
             padding: 7px 50px
+            border-bottom: 1px solid #ffffff
 
     .footer
         background-color: #020202
@@ -39,18 +46,45 @@
         display: flex
         flex-direction: column
         align-items: center
+        position: relative
         .up
             background-color: #C73838
-            height: 30px
-            width: 30px
+            // height: 3.5vh
+            // width: 3.5vw
+            width: 40px
+            height: 40px
+            border-radius: 3px
+            position: absolute
+            top: -1.5vh
+            left: calc( 50% - 3.5vw )
+            left: calc( 50% - 20px )
+
         .cont-icon
+            width: 40%
             margin-top: 20px
-            display: inline-block
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+
             .icon
+                margin-top: 10px
                 color: #ffffff
-                width: 20px
-                height: 20px
-                margin-left: 10px
+                width: 30px
+                height:40px
+
+
+::-webkit-input-placeholder
+   ccolor: #ffffff
+
+:-moz-placeholder
+   ccolor: #ffffff
+
+::-moz-placeholder 
+   cocolor: #ffffff
+
+:-ms-input-placeholder
+   ccolor: #ffffff
+
 
 @media (min-width: 1024px) and (max-width: 1240px)
 

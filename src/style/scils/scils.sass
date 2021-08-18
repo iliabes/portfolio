@@ -1,13 +1,13 @@
 .scils
-    .cont-for-other
+    .cont
+        background-color: rgb(13,17,23)
         .set-skil
-            margin-top: 10px
+            margin-bottom: 3vh
             display: flex
             flex-direction: column
-            gap:5px
+            gap: 10px
             .cont-title
                 background-color: $violet
-                display: inline
                 width: 95px
                 height: 25px
                 display: flex
@@ -17,9 +17,10 @@
                 .title-ckil
                     font-size: 21px
                     padding: 5px 10px
+
             .skill-bar
                 height: 4px
-                width: 70vw
+                width: 100%
                 background-color: grey
                 display: inherit
                 &::before
@@ -28,43 +29,81 @@
                     width: 50%
                     height: 4px
                     background-color: $violet
+
             .cont-technologis
                 .cont-techno
+                    margin-right: 1vw
                     border: 1px solid $violet
+                    background-color: $violet
+                    background-color: #dd2de017
+                    border-radius: 4px
                     display: inline-block
                     flex-wrap: wrap
+                    box-shadow:  2px 2px 4px #000
                     .technologi
-                        width: 6vw
-                        height: 6vh
-                        margin: 13px
+                        width: 3vw
+                        height: 3.5vh
+                        margin: 11px
                 .cont-dis
                     display: inline-block
                     margin-left: 5%
-                    .cont-techno-dis
+                    .grey-cont
+                        background-color: #80808015
                         border: 1px solid grey
-                        cursor: no-drop
-                        display: inline-block
-                        flex-wrap: wrap
-                        .technologi
-                            width: 6vw
-                            height: 6vh
-                            margin: 13px
+                            
+
+
+@media (min-width: 1240px)
+    .scils .cont .set-skil .cont-technologis .cont-techno .technologi
+        height: 3.9vh
+        width: 2.2vw
+
+    .scils .cont .set-skil .cont-technologis .cont-techno
+        margin-right: 1%
 
 
 @media (min-width: 1024px) and (max-width: 1240px)
 
+
 @media (min-width: 768px) and (max-width: 1024px)
 
-@media (min-width: 568px) and (max-width: 1024px)
+    .scils .cont .set-skil .cont-technologis .cont-techno
+        margin-right: 3%
 
+
+@media (min-width: 568px) and (max-width: 768px)
+
+
+    .scils .cont .set-skil .cont-technologis .cont-techno .technologi
+        width: 3.4vw
+        height: 3.3vh
+
+    .scils .cont .set-skil .cont-technologis .cont-techno
+        margin-right: 3%
+
+
+    
 @media (max-width: 568px)
+
+
+    .scils .cont .set-skil .cont-technologis .cont-techno
+        margin-right: 3%
+
+    .scils .cont .set-skil .cont-technologis .cont-techno .technologi
+        width: 6vw
+        height: 4vh
+        margin: 8px
+    
     .pojects-cont-right .cont-sign .cont-techologi .techologi p, .pojects-cont-left .cont-sign .cont-techologi .techologi p
         font-size: 11px
 
-    .scils .cont-for-other .set-skil .cont-technologis .cont-techno .technologi
-        width: 5vw
-        height: 4vh
 
-    .scils .cont-for-other .set-skil .cont-technologis .cont-dis .cont-techno-dis .technologi
-        width: 5vw
-        height: 4vh
+
+@media (max-width: 300px)
+
+
+    .scils .cont .set-skil .cont-technologis .cont-techno .technologi
+        width: 7vw
+        height: 2.3vh
+        margin: 5px
+
