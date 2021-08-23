@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
@@ -39,6 +40,15 @@ module.exports = smp.wrap({
         ],
       },
       {
+        test: /\.css/,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+        ],
+      },
+      {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
@@ -64,6 +74,11 @@ module.exports = smp.wrap({
         { from: "./src/img", to: "./img/" },
 
       ],
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
     })
   ],
+  
 });

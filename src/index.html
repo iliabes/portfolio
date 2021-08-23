@@ -6,7 +6,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="top-menu">
+    <!-- <div class="top-menu">
       <p class="logo">Bes</p>
       <i class="fas fa-hamburger humb-menu"></i>
   
@@ -17,27 +17,28 @@
         <p>Contacts</p>
         <p>Ru</p>
         <p><i class="fas fa-adjust"></i></p>
-        
       </div>
       
-    </div>
+    </div> -->
+
+    <div  >
   <!-- ///-------------------------------------- -->
-    <section class="about">
-      <div class="cont">
+    <section  id="test"  class="about">
+      <div class="cont cont-top">
         <h1 class="heading">Portfolio</h1>
         <div class="cont-header">
-        <div class="curcle-img">
+
+        <div data-aos="fade-left" class="curcle-img">
         <img class="img-portfolio" src="./img/port.jpg" alt="">
         </div>
-        <div class="cont-text">
-        <div class="block-text block-text1">
-        <p>Я занимаюсь разработкой web-проектов уже более 15 лет. Специализируюсь на разработке решений  бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла 
+
+        <div  class="cont-text">
+        <div data-aos-anchor-placement="top-top" data-aos="fade-right" class="block-text ">
+        <p id="element" class="text-header">
+          HelloY !
         </p>
         </div>
-        <div class="block-text block-text2">
-          <p>Я занимаюсь разработкой web-проектов уже более 15 лет. Специализируюсь на разработке решений  бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла 
-          </p>
-        </div>
+
       </div>
       <h1 class="heading-close">About</h1>
     </div>
@@ -47,7 +48,7 @@
     <section class="potrfolio">
       <div class="cont">
       <h1 class="heading">My projects</h1>
-      <div class="pojects-cont-right">
+      <div data-aos="fade-right"  class="pojects-cont-right">
         <div class="cont-img">
           <div class="overlay">
             <span class="sign-img">Drop Todo</span>
@@ -66,9 +67,9 @@
         </div>  
       </div>
       </div>
-      <div class="pojects-cont-left">
+      <div data-aos="fade-right" class="pojects-cont-left">
         <div class="cont-sign">
-        <p class="sign-project">Drop todo - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+        <p data-aos="fade-in"  class="sign-project">Drop todo - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <div class="cont-techologi">
           <div class="techologi"><p class="text-techo">Bootstrap </p></div>
           <div class="techologi"><p class="text-techo">React</p></div>
@@ -82,7 +83,7 @@
         </div>
       </div>
       </div>
-      <div class="pojects-cont-right">
+      <div data-aos="fade-left" class="pojects-cont-right">
         <div class="cont-img">
           <div class="overlay">
             <span class="sign-img">Drop Todo</span>
@@ -103,7 +104,8 @@
     <section class="scils">
       <div class="cont">
         <div class="heading">Skils</div>
-        <div class="set-skil">
+
+        <div data-aos="fade-right" class="set-skil">
           <span class="cont-title">
             <p class="title-ckil">Css</p>
           </span>
@@ -128,7 +130,7 @@
           </div>
         </div>
         <!-- -- -->
-        <div class="set-skil">
+        <div data-aos="fade-right" data-aos="fade-right" class="set-skil">
           <span class="cont-title">
             <p class="title-ckil">Html</p>
           </span>
@@ -155,7 +157,7 @@
           </div>
         </div>
         <!-- -- -->
-        <div class="set-skil">
+        <div data-aos="fade-right" class="set-skil">
           <span class="cont-title">
             <p class="title-ckil">Js</p>
           </span>
@@ -182,7 +184,7 @@
           </div>
         </div>
         <!------>
-        <div class="set-skil">
+        <div data-aos="fade-right" class="set-skil">
           <span class="cont-title">
             <p class="title-ckil">Build</p>
           </span>
@@ -201,7 +203,7 @@
           </div>
         </div>
         <!----->
-        <div class="set-skil">
+        <div data-aos="fade-right" class="set-skil">
           <span class="cont-title">
             <p class="title-ckil">Build</p>
           </span>
@@ -220,21 +222,21 @@
     </section>
     <!-- //-----------------------contacts-->
     <section class="contacts">
-    <div class="cont">
+    <div data-aos="zoom-in-up" class="cont">
       <div class="heading">Contacts</div>
 
-      <p class="quet">Have a question or want to work together?</p>
+      <p data-aos="zoom-in-up" class="quet">Have a question or want to work together?</p>
 
-      <div class="cont-input">
+      <div data-aos="zoom-in-up" class="cont-input">
         <input placeholder="Your name"  class='text-inp' type="text">
   
       </div>
 
-      <div class="cont-input">
+      <div data-aos="zoom-in-up" class="cont-input">
         <input placeholder="Your emeil"  class='text-inp' type="text">
       </div>
 
-      <div class="cont-input ">
+      <div data-aos="zoom-in-up" class="cont-input ">
         <input placeholder="Your message"  class='text-inp area' type="text">
         <button class="submit">Submit</button>
       </div>
@@ -254,5 +256,6 @@
       </div>
     </div>
   </section>
+    </div>
   </body>
 </html>

@@ -2,162 +2,107 @@
 
 
 .top-menu
-    display: block
-    height: 80px
+    position: fixed
+    width: 100%
+    height: 8vh
+    z-index: 999
     background-color: $black
     display: flex
     justify-content: space-between
+    padding: 0 8%
+    box-sizing: border-box
     align-items: center
     .humb-menu
         font-size: 20px
         color: $white
-        margin-right: 140px
-        display: none
+        
 
     .logo
         font-size: 20px
         color: $white
-        margin-left: 3%
     .top-item
         font-size: 16px
         display: flex
         color: #FFFFFF
+        display: none
         p
-            margin-right: 105px
+            // margin-right: 105px
+            margin-right: 6vw
             transition: 1s
             &:hover
                 color: $violet
 
 .about
+    .cont-top
+        padding-top: 8vh
     .cont
         background-color: $back2
-        display: grid
-        padding-bottom: 140px
-        grid-gap: 10px
+        // display: grid
+        // padding-bottom: 140px
+        // grid-gap: 10px
         .cont-header
             display: flex
             justify-content: space-between
         .curcle-img
+            width: 50%
             grid-area: curcleImg
             display: inline-block
-        
             img
                 border-radius: 50%
                 box-shadow: 5px 5px 3px 0 black
-                width: 40vw
+                width: 100%
+                height: 80%
         .cont-text
-            width: 40vw
+            width: 48%
             .block-text
-                border: 1px solid $violet
-                box-shadow: 5px 5px 3px 0 black
-                padding: 2%
+                margin-left: 5%
                 p
-                   font-size: 1.25rem
+                   line-height: 6vh    
+                   letter-spacing: .4vh
+                   font-size: 4.25rem
+                   color: $violet
+                   margin: 0
 
 
-//----------------------
 
-//media-------------------------------------------------
-//monitor
+
 @media (min-width: 1240px)
-    .block-text
-        margin-left: 1%
-        .heading-close
-            display: none
+    .top-menu .humb-menu
+        display: none
 
-//tablet ----------------
-    @media (min-width: 1024px) and (max-width: 1240px)
-    .top-menu
-        .logo
-            // margin-left: 2%
-        .top-item
-            p
-                margin-right: 94px
+    .top-menu .top-item 
+        display: flex
 
-    .about .cont .curcle-img img
-        width: 330px
-    .heading
-        margin-left: 0
-        background-color: red
+    .about .cont .cont-text .block-text .text-header
+        line-height: 8vh
 
-//phablet
+@media (min-width: 1024px) and (max-width: 1240px)
+    .about .cont .cont-text .block-text .text-header
+        line-height: 9vh
+
+
 @media (min-width: 768px) and (max-width: 1024px)
-    .top-menu
-        height: 40px
-        .logo
-            margin-left: 3%
-        .humb-menu
-            display: block
-            margin-right: 3%
-        .top-item
-            display: none
+    .about .cont .cont-text .block-text .text-header
+        line-height: 8vh
+        font-size: 3rem
 
-    .about
-        .cont
-            padding: 0 15px
-            align-items: stretch
-            justify-items: center
-            grid-template-columns: 1fr
-            grid-auto-rows: auto
-            grid-template-areas: " heading " " curcleImg " " textblock1 " " textblock2 " "textblock3 " "heading-close"
-            .heading ,.heading-close
-                font-size: 24px
-                margin-left: -7%
-                background-color: #78909c
-            .curcle-img
-                img
-                    width: 200px
-                    height: 200px
-            .block-text
-                p
-                    font-size: 14px
+@media (min-width: 568px) and (max-width: 768px)
+    .about .cont .cont-text .block-text .text-header
+        line-height: 6vh
+        font-size: 2.5rem
 
-@media (min-width: 568px) and (max-width: 1024px)
-    .top-menu
-        height: 30px
-        .logo
-            margin-left: 3%
-        .humb-menu
-            display: block
-            margin-right: 3%
-        .top-item
-            display: none
-
-    .about
-        .cont
-            height: 100vh
-            padding: 0 15px
-            align-items: stretch
-            justify-items: center
-            grid-template-columns: 1fr
-            grid-auto-rows: auto
-            grid-template-areas: " heading " " curcleImg " " textblock1 " " textblock2 " "textblock3 " "heading-close"
-            .heading ,.heading-close
-                display: block
-                font-size: 24px
-                margin-left: -7%
-                background-color: #78909c
-            .heading-close
-                margin-bottom: 4%
-            .curcle-img
-                img
-                    width: 200px
-                    height: 200px
-            .block-text
-                p
-                    font-size: 14px
+  
 
 @media (max-width: 568px)
-    body
-        .top-menu
-            height: 30px
-            .logo
-                margin-left: 3%
-            .humb-menu
-                display: block
-                margin-right: 3%
-            .top-item
-                display: none
+    .about .cont .curcle-img img
+        width: 90%
+    .top-menu
+        height: 6vh
+    .about .cont .cont-text .block-text .text-header
+        line-height: 3vh
+        font-size: 1.8rem
 
-.about .cont-for-other .cont-text .block-text p
-    font-size: 14px
+@media (max-width: 330px)
+    .about .cont .cont-text .block-text .text-header
+        line-height: 2.5vh
+        font-size: 1.5rem
