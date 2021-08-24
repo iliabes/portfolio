@@ -3,6 +3,8 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const smp = new SpeedMeasurePlugin();
 
 module.exports = smp.wrap({
@@ -15,7 +17,7 @@ module.exports = smp.wrap({
   devtool: 'eval',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    host: '192.168.43.249',
+    host: '192.168.43.251',
     port: 8080,
     open: true,
   },
@@ -40,11 +42,10 @@ module.exports = smp.wrap({
         ],
       },
       {
-        test: /\.css/,
+        test: /\.css$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
+          MiniCssExtractPlugin.loader,
+          // "style-loader",
           "css-loader",
         ],
       },
@@ -69,6 +70,10 @@ module.exports = smp.wrap({
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
+    new MiniCssExtractPlugin({
+      filename: 'maincss.css',
+      insert: "#loader",
+    }),
     new CopyPlugin({
       patterns: [
         { from: "./src/img", to: "./img/" },
@@ -78,7 +83,8 @@ module.exports = smp.wrap({
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-    })
+    }),
+    
   ],
   
 });

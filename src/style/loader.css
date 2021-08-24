@@ -1,0 +1,87 @@
+@keyframes ldio-s10nkdn9g3-1 {
+  0% { transform: rotate(0deg) }
+ 50% { transform: rotate(-45deg) }
+100% { transform: rotate(0deg) }
+}
+@keyframes ldio-s10nkdn9g3-2 {
+  0% { transform: rotate(180deg) }
+ 50% { transform: rotate(225deg) }
+100% { transform: rotate(180deg) }
+}
+.ldio-s10nkdn9g3 > div:nth-child(2) {
+transform: translate(-15px,0);
+}
+.ldio-s10nkdn9g3 > div:nth-child(2) div {
+position: absolute;
+top: 40.199999999999996px;
+left: 40.199999999999996px;
+width: 120.6px;
+height: 60.3px;
+border-radius: 120.6px 120.6px 0 0;
+background: #923db3;
+animation: ldio-s10nkdn9g3-1 0.7194244604316546s linear infinite;
+transform-origin: 60.3px 60.3px
+}
+.ldio-s10nkdn9g3 > div:nth-child(2) div:nth-child(2) {
+animation: ldio-s10nkdn9g3-2 0.7194244604316546s linear infinite
+}
+.ldio-s10nkdn9g3 > div:nth-child(2) div:nth-child(3) {
+transform: rotate(-90deg);
+animation: none;
+}@keyframes ldio-s10nkdn9g3-3 {
+  0% { transform: translate(190.95px,0); opacity: 0 }
+ 20% { opacity: 1 }
+100% { transform: translate(70.35px,0); opacity: 1 }
+}
+.ldio-s10nkdn9g3 > div:nth-child(1) {
+display: block;
+}
+.ldio-s10nkdn9g3 > div:nth-child(1) div {
+position: absolute;
+top: 92.46px;
+left: -8.04px;
+width: 16.08px;
+height: 16.08px;
+border-radius: 50%;
+background: #f5468e;
+animation: ldio-s10nkdn9g3-3 0.7194244604316546s linear infinite
+}
+.ldio-s10nkdn9g3 > div:nth-child(1) div:nth-child(1) { animation-delay: -0.9313000000000001s }
+.ldio-s10nkdn9g3 > div:nth-child(1) div:nth-child(2) { animation-delay: -0.45870000000000005s }
+.ldio-s10nkdn9g3 > div:nth-child(1) div:nth-child(3) { animation-delay: 0s }
+.loadingio-spinner-bean-eater-clgnlr4vka {
+width: 201px;
+height: 201px;
+display: inline-block;
+overflow: hidden;
+background: #f1f2f3;
+}
+.ldio-s10nkdn9g3 {
+width: 100%;
+height: 100%;
+position: relative;
+transform: translateZ(0) scale(1);
+backface-visibility: hidden;
+transform-origin: 0 0; /* see note above */
+}
+.ldio-s10nkdn9g3 div { box-sizing: content-box; }
+
+.cont-loader{
+position: absolute;
+z-index: 999;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%; 
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #000;
+}
+
+.ldio-s10nkdn9g3 {
+background-color: #000;
+}
+
+
+
