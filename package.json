@@ -47,7 +47,7 @@
     "sass": "^1.37.5",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
-    "webpack": "^5.51.1",
+    "webpack": "^5.51.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
