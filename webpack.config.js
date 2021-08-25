@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const smp = new SpeedMeasurePlugin();
 
-module.exports = smp.wrap({
+module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
@@ -17,10 +17,27 @@ module.exports = smp.wrap({
   devtool: 'eval',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    // host: '192.168.43.251',
-    port: 8080,
-    open: true,
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      insert: "#loader",
+      filename: "blo.css",
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/img", to: "./img/" },
+
+      ],
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
+    
+  ],
   module: {
     rules: [
       {
@@ -33,20 +50,13 @@ module.exports = smp.wrap({
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
+          MiniCssExtractPlugin.loader,"css-loader","sass-loader",
         ],
       },
       {
         test: /\.css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
-          // "style-loader",
-          "css-loader",
+          MiniCssExtractPlugin.loader,"css-loader",
         ],
       },
       {
@@ -66,25 +76,8 @@ module.exports = smp.wrap({
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'maincss.css',
-      insert: "#loader",
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: "./src/img", to: "./img/" },
 
-      ],
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-    }),
-    
-  ],
   
-});
+};
+
+
