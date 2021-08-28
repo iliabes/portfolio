@@ -1,6 +1,7 @@
 // import loader from  "./style/loader.css"
 import './script/preload'
 import './script/alert'
+import './script/swipe'
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'

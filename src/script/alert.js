@@ -8,37 +8,40 @@ document.addEventListener('wheel', (e) => {mouseSlide(e)})
 document.addEventListener('keyup', (e) => {catchKey(e)})
 
 
+let animateEnd = true;
+
 function mouseSlide(e){
+
     if(e.deltaY > 0){
         moveRight()
     }else{
         moveLeft()
-        
     }
 }
 
-for(let elem of section){
-    console.log(elem)
-}
 
-
-
-console.log(section)
-
-function moveLeft(){
-    if(counter < 3){
+export function moveLeft(){
+    if(animateEnd){
+        animateEnd = false;
+    if(counter < 3 ){
         counter++
     }
-    console.log(counter,section[counter])
+    }
+    console.log(counter,animateEnd)
     section[counter].style.transform = 'translateX(-100vw)'
+    setTimeout(()=>{animateEnd = true},1000)
 }
 
-function moveRight(){
-    if(counter > 0){
+export function moveRight(){
+    if(animateEnd){
+        animateEnd = false;
+    if(counter > 0 ){
         counter--
-    }
-    console.log(counter,section[counter])
+        }
+    }   
+    console.log(counter,animateEnd)
     section[counter + 1].style.transform = 'translateX(0vw)'
+    setTimeout(()=>{animateEnd = true},1000)
 }
 
 
