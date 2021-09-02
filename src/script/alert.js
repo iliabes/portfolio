@@ -1,3 +1,6 @@
+import { catchData } from './animate';
+
+export {catchData} from './animate'
 let main = document.querySelector('#main');
 let section = main.children;
 let counter = 0;
@@ -27,6 +30,7 @@ export function moveLeft(){
         counter++
     }
     }
+    catchData(section[counter])
     console.log(counter,animateEnd)
     section[counter].style.transform = 'translateX(-100vw)'
     setTimeout(()=>{animateEnd = true},1000)
