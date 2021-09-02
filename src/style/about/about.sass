@@ -46,6 +46,8 @@
             width: 50%
             grid-area: curcleImg
             display: inline-block
+            animation:  3s ease-in-out 
+            animation-name: blah
             img
                 border-radius: 50%
                 box-shadow: 5px 5px 3px 0 black
@@ -105,3 +107,14 @@
     .about .cont .cont-text .block-text .text-header
         line-height: 2.5vh
         font-size: 1.5rem
+
+
+@keyframes blah
+  0%
+    transform: rotate(0deg)
+    width: 10vh
+    height: 10vh
+    opacity: 0
+  100%
+    transform: rotate(360deg)
+    opacity: 1

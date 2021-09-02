@@ -10,7 +10,7 @@
     display: flex
     justify-content: space-between
     margin-top: 4vh
-
+    opacity: 0
     .cont-img
         z-index: 998
         width: 50%
@@ -119,3 +119,12 @@
 
     .pojects-cont-right .cont-sign .cont-techologi .techologi .text-techo , .pojects-cont-left .cont-sign .cont-techologi .techologi .text-techo
         font-size: 0.5rem
+
+
+@keyframes blah
+  0%
+    transform: translateX(-100vh)
+    opacity: 0
+  100%
+    transform: translateX(0vh)
+    opacity: 1
