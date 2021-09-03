@@ -9,7 +9,8 @@ export function catchData(elem){
     for (let i = 0; i < elems.length; i++) {
         (function(i) {
             setTimeout(function() {
-                elems[i].style.animation = "blah 1s ease-in-out forwards"
+                let classAninmate = elems[i].dataset.yo
+                elems[i].style.animation = `${classAninmate} 1s ease-in-out forwards`
             }, 500 * i);
         })(i);
     }
