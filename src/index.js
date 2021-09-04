@@ -2,6 +2,7 @@
 import './script/preload'
 import './script/alert'
 import './script/swipe'
+import './script/humbMenu'
 import './script/animate' 
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'

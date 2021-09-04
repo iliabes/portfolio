@@ -6,31 +6,54 @@
     <title>Portfolio</title>
   </head>
   <body>
-<!-- ------------------------------------------------ -->
+<!-- ------------loader------------------------------------ -->
 <div id="loader" class="cont-loader">
 <div class="loadingio-spinner-bean-eater-clgnlr4vka"><div class="ldio-s10nkdn9g3">
   <div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div>
   </div></div>
 </div>
-<!-- ------------------------------------------------ -->
 
+<!-- humbMenu-------------------------- -->
+<div id='humbMenu' class='humb-menu'>
+  
+  <div class="top-line"><div class="logo">Bes</div><div id='buttonCros' class="cont-icon-cross"><i  class="fa fa-times icon" aria-hidden="true"></i></div></div>
+  <div class="cont-humb">
+      <div class="cont-point">
+        <p class="points"><span class="white-points"><</span>About<span class="white-points">/></span></p>
+      </div>
+      <div class="cont-point">
+        <p class="points"><span class="white-points"><</span>Projects<span class="white-points">/></span></p>
+      </div>
+      <div class="cont-point">
+        <p class="points"><span class="white-points"><</span>Scills<span class="white-points">/></span></p>
+      </div>
+      <div class="cont-point">
+        <p class="points"><span class="white-points"><</span>Contacts<span class="white-points">/></span></p>
+      </div>
+  </div>
+</div>
+
+
+<!-- ----------top-menu-------------------------------------- -->
     <div class="top-menu">
       <p class="logo">Bes</p>
-      <i class="fas fa-hamburger humb-menu"></i>
-  
+      <div id='buttonMenu' class="cont-icon-bmenu">
+        <i  class="fas fa-hamburger humb-menu-icon">
+        </i>
+      </div>
       <div class="top-item">
         <p>About me</p>
         <p>Projects</p>
         <p>Skils</p>
         <p>Contacts</p>
         <p>Ru</p>
-        <p><i class="fas fa-adjust"></i></p>
+        <p><i  class="fas fa-adjust"></i></p>
       </div>
       
     </div>
 
 
-  <!-- ///-------------------------------------- -->
+  <!-- about-------------------------------------- -->
   <div class="main" id="main">
     <section  id="test"  class="about">
       <div class="cont cont-top">
@@ -53,53 +76,58 @@
     </div>
   </div>
     </section>
+
+
     <!-- //-------------------portfolio -->
     <section class="potrfolio">
       <div class="cont">
-      <h1 class="heading">My projects</h1>
-      <div data-yo="proj-right"  class="pojects-cont-right">
-        <div class="cont-img">
+      <h1 data-yo="heading" class="heading">My projects</h1>
+
+      <div   class="pojects-cont-right">
+        <div data-yo="proj-img-right" class="cont-img">
           <div class="overlay">
             <span class="sign-img">Drop Todo</span>
             <img   class="img-portfolio " src="./img/3.png" alt="">
           </div>
         </div>
-        <div class="cont-sign">
-        <p class="sign-project">Drop todo - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+        <div data-yo="proj-sign-right" class="cont-sign">
+        <p class="sign-project"><span class="gold"> Drop todo </span> - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <div class="cont-techologi">
           <div class="techologi"><p class="text-techo">React</p></div>
           <div class="techologi"><p class="text-techo">NodeJS</p></div>
           <div class="techologi"><p class="text-techo">Bootstrap </p></div>
           <div class="techologi"><p class="text-techo">React</p></div>
           <div class="techologi"><p class="text-techo">Css</p></div>
-
         </div>  
       </div>
       </div>
-      <div data-yo="proj-left"  class="pojects-cont-left ">
-        <div class="cont-sign">
-        <p   class="sign-project">Drop todo - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+
+
+      <div    class="pojects-cont-left ">
+        <div data-yo="proj-sign-left" class="cont-sign">
+        <p   class="sign-project"><span class="gold"> Drop todo </span> - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <div class="cont-techologi">
           <div class="techologi"><p class="text-techo">Bootstrap </p></div>
           <div class="techologi"><p class="text-techo">React</p></div>
           <div class="techologi"><p class="text-techo">Css</p></div>
         </div>  
       </div>
-      <div class="cont-img">
+      <div data-yo="proj-img-left" class="cont-img">
         <div class="overlay">
           <span class="sign-img">Drop Todo</span>
           <img class="img-portfolio" src="./img/1.jpg" alt="">
         </div>
       </div>
       </div>
-      <div data-yo="proj-right" class="pojects-cont-right ">
-        <div class="cont-img">
+
+      <div  class="pojects-cont-right ">
+        <div data-yo="proj-img-right" class="cont-img">
           <div class="overlay">
             <span class="sign-img">Drop Todo</span>
             <img class="img-portfolio" src="./img/2.jpg" alt="">
           </div>
         </div>
-        <div class="cont-sign">
+        <div  data-yo="proj-sign-right" class="cont-sign">
         <p class="sign-project"><span class="gold"> Drop todo </span> - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <div class="cont-techologi">
           <div class="techologi"><p class="text-techo">React</p></div>
@@ -108,7 +136,10 @@
         </div>  
       </div>
       </div>
+
     </section>
+
+
     <!-- //-----------------------skils -->
     <section class="scils">
       <div class="cont">
@@ -229,6 +260,8 @@
         </div>
       </div>
     </section>
+
+
     <!-- //-----------------------contacts-->
     <section class="contacts">
     <div  class="cont">
