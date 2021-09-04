@@ -19,16 +19,16 @@
   <div class="top-line"><div class="logo">Bes</div><div id='buttonCros' class="cont-icon-cross"><i  class="fa fa-times icon" aria-hidden="true"></i></div></div>
   <div class="cont-humb">
       <div class="cont-point">
-        <p class="points"><span class="white-points"><</span>About<span class="white-points">/></span></p>
+        <p id='hambAbout' class="points"><span class="white-points"><</span>About<span class="white-points">/></span></p>
       </div>
       <div class="cont-point">
-        <p class="points"><span class="white-points"><</span>Projects<span class="white-points">/></span></p>
+        <p id='hambProjects' class="points"><span class="white-points"><</span>Projects<span class="white-points">/></span></p>
       </div>
       <div class="cont-point">
-        <p class="points"><span class="white-points"><</span>Scills<span class="white-points">/></span></p>
+        <p id='hambScills' class="points"><span class="white-points"><</span>Scills<span class="white-points">/></span></p>
       </div>
       <div class="cont-point">
-        <p class="points"><span class="white-points"><</span>Contacts<span class="white-points">/></span></p>
+        <p id='hambContacts' class="points"><span class="white-points"><</span>Contacts<span class="white-points">/></span></p>
       </div>
   </div>
 </div>
@@ -81,16 +81,16 @@
     <!-- //-------------------portfolio -->
     <section class="potrfolio">
       <div class="cont">
-      <h1 data-yo="heading" class="heading">My projects</h1>
+      <h1 data-order="0" data-anim="heading" class="heading">My projects</h1>
 
       <div   class="pojects-cont-right">
-        <div data-yo="proj-img-right" class="cont-img">
+        <div data-order="0" data-anim="proj-img-right" class="cont-img">
           <div class="overlay">
             <span class="sign-img">Drop Todo</span>
             <img   class="img-portfolio " src="./img/3.png" alt="">
           </div>
         </div>
-        <div data-yo="proj-sign-right" class="cont-sign">
+        <div data-order="1" data-anim="proj-sign-right" class="cont-sign">
         <p class="sign-project"><span class="gold"> Drop todo </span> - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <div class="cont-techologi">
           <div class="techologi"><p class="text-techo">React</p></div>
@@ -104,7 +104,7 @@
 
 
       <div    class="pojects-cont-left ">
-        <div data-yo="proj-sign-left" class="cont-sign">
+        <div data-order="1" data-anim="proj-sign-left" class="cont-sign">
         <p   class="sign-project"><span class="gold"> Drop todo </span> - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <div class="cont-techologi">
           <div class="techologi"><p class="text-techo">Bootstrap </p></div>
@@ -112,7 +112,7 @@
           <div class="techologi"><p class="text-techo">Css</p></div>
         </div>  
       </div>
-      <div data-yo="proj-img-left" class="cont-img">
+      <div data-order="0" data-anim="proj-img-right" class="cont-img">
         <div class="overlay">
           <span class="sign-img">Drop Todo</span>
           <img class="img-portfolio" src="./img/1.jpg" alt="">
@@ -121,13 +121,13 @@
       </div>
 
       <div  class="pojects-cont-right ">
-        <div data-yo="proj-img-right" class="cont-img">
+        <div data-order="0" data-anim="proj-img-left" class="cont-img">
           <div class="overlay">
             <span class="sign-img">Drop Todo</span>
             <img class="img-portfolio" src="./img/2.jpg" alt="">
           </div>
         </div>
-        <div  data-yo="proj-sign-right" class="cont-sign">
+        <div data-order="1" data-anim="proj-sign-right" class="cont-sign">
         <p class="sign-project"><span class="gold"> Drop todo </span> - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <div class="cont-techologi">
           <div class="techologi"><p class="text-techo">React</p></div>
@@ -145,7 +145,7 @@
       <div class="cont">
         <div class="heading">Skils</div>
 
-        <div  class="set-skil">
+        <div data-order="0" data-anim="proj-sign-right"  class="set-skil">
           <span class="cont-title">
             <p class="title-ckil">Css</p>
           </span>

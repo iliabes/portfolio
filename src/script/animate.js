@@ -1,40 +1,73 @@
 export function catchData(elem){
-    let elems = elem.querySelectorAll('[data-yo]')
-    let massElem = []
-    elems.forEach(element => {
-        if(massElem.includes(element.classList[0]) === false){
-            massElem.push(element.classList[0])
-        }
-        })
-        console.log(massElem)
+    let elems = elem.querySelectorAll('[data-anim]')
+    let allNumbers = []
+    let lastNumber 
+    let groupAnimateElems = []
+    let elements = {}
 
-    for (let i = 0; i < elems.length; i++) {
-        (function(i) {
+    elems.forEach((element,index) => {
+        element.id =  elem.className + index
+        allNumbers.push(Number(element.getAttribute('data-order')))
+    })
+    lastNumber = allNumbers.sort()[allNumbers.length - 1]
+
+    for(let i = 0; i <= lastNumber; i++){
+        console.log('запуск цикла - '+ i);
             setTimeout(function() {
-                console.log(elems[i])
-                let classAninmate = elems[i].dataset.yo
-                elems[i].style.animation = `${classAninmate} 1s ease-in-out forwards`
-            }, 500 * i);
-        })(i);
+                console.log('запуск анимации - ' + i)
+                elems.forEach((element,index) => {
+                    if(Number(element.getAttribute('data-order')) === i){
+                        groupAnimateElems.push(element)
+                    }
+            })
+    
+            groupAnimateElems.forEach((elentik)=>{
+                console.log(elentik)
+                let classAninmate = elentik.dataset.anim
+                elentik.style.animation = `${classAninmate} 1s ease-in-out forwards`
+            })
+
+            groupAnimateElems = []
+            }, 1000 + 1000 * i);
     }
 
-}
 
-let animation = [
-    { transform: 'translateX(-1000px)' },
-    { transform: 'translateX(0)'  } 
-]
 
-let ooptionAnimation = {
-    duration: 2000
+
 }
 
 
 
-    // elems.forEach(element => {
-    //     console.log(element)
-    //     // element.animate(animation, ooptionAnimation)
-    //     element.style.animation = "blah 3s ease-in-out "
-    
-    // });
-    
+// export function catchData(elem){
+//     let elems = elem.querySelectorAll('[data-yo]')
+//     let massElem = []
+//     elems.forEach(element => {
+//         if(massElem.includes(element.classList[0]) === false){
+//             massElem.push(element.classList[0])
+//         }
+//         })
+//         console.log(massElem)
+
+//     for (let i = 0; i < elems.length; i++) {
+//         (function(i) {
+//             setTimeout(function() {
+//                 console.log(elems[i])
+//                 let classAninmate = elems[i].dataset.yo
+//                 elems[i].style.animation = `${classAninmate} 1s ease-in-out forwards`
+//             }, 500 * i);
+//         })(i);
+//     }
+
+// }
+
+
+
+// for (let i = 0; i < groupAnimateElems.length; i++) {
+//     (function(i) {
+//         setTimeout(function() {
+//             console.log(elems[i])
+//             let classAninmate = elems[i].dataset.anim
+//             elems[i].style.animation = `${classAninmate} 1s ease-in-out forwards`
+//         }, 500 * i);
+//     })(i);
+// }

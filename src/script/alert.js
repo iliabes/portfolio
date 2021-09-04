@@ -48,7 +48,20 @@ export function moveRight(){
     setTimeout(()=>{animateEnd = true},1000)
 }
 
-
+export function changeSlide(slideHere){
+    console.log(slideHere,counter)
+    if(counter  < slideHere){
+        for(let i = 0; i < 2 ; i++){
+            moveLeft()
+        }
+    }
+    if(counter  > slideHere){
+        for(let i = 0; i < 2 ; i++){
+            moveRight()
+        }
+    }
+    
+}
 
 function catchKey(e){
     if(e.keyCode == 65){
