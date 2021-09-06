@@ -14,7 +14,6 @@ document.addEventListener('keyup', (e) => {catchKey(e)})
 let animateEnd = true;
 
 function mouseSlide(e){
-
     if(e.deltaY > 0){
         moveRight()
     }else{
@@ -48,19 +47,26 @@ export function moveRight(){
     setTimeout(()=>{animateEnd = true},1000)
 }
 
+
 export function changeSlide(slideHere){
+    let counterMemo = counter;
     console.log(slideHere,counter)
-    if(counter  < slideHere){
-        for(let i = 0; i < 2 ; i++){
+    if(counterMemo  < slideHere){
+        console.log( slideHere - counterMemo)
+        for(let i = 1; i <= slideHere - counterMemo; i++){
+            console.log('раз' + i,slideHere - counterMemo + 'kolvo')
+            animateEnd = true
             moveLeft()
         }
     }
-    if(counter  > slideHere){
-        for(let i = 0; i < 2 ; i++){
+
+    if(counterMemo  > slideHere){
+        console.log(counterMemo + slideHere + 'ttt' )
+        for(let i = 0; i < counterMemo - slideHere ; i++){
+            animateEnd = true
             moveRight()
         }
     }
-    
 }
 
 function catchKey(e){

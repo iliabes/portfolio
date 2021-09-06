@@ -7,9 +7,15 @@ let hambAbout = document.getElementById('hambAbout')
 let hambProjects = document.getElementById('hambProjects')
 let hambScills = document.getElementById('hambScills')
 let humbContacts = document.getElementById('hambContacts')
-
+let buttonUp = document.getElementById('buttonUp')
 
 hambAbout.addEventListener('click', function (event) {
+  changeSlide(0)
+  humbMenu.style.display = 'none'
+});
+
+
+buttonUp.addEventListener('click', function (event) {
   changeSlide(0)
   humbMenu.style.display = 'none'
 });

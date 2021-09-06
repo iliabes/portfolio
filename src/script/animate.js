@@ -12,9 +12,7 @@ export function catchData(elem){
     lastNumber = allNumbers.sort()[allNumbers.length - 1]
 
     for(let i = 0; i <= lastNumber; i++){
-        console.log('запуск цикла - '+ i);
             setTimeout(function() {
-                console.log('запуск анимации - ' + i)
                 elems.forEach((element,index) => {
                     if(Number(element.getAttribute('data-order')) === i){
                         groupAnimateElems.push(element)
@@ -22,13 +20,12 @@ export function catchData(elem){
             })
     
             groupAnimateElems.forEach((elentik)=>{
-                console.log(elentik)
                 let classAninmate = elentik.dataset.anim
                 elentik.style.animation = `${classAninmate} 1s ease-in-out forwards`
             })
 
             groupAnimateElems = []
-            }, 1000 + 1000 * i);
+            }, 400 + 400 * i);
     }
 
 
