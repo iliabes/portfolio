@@ -1,11 +1,13 @@
 
 .potrfolio
     .heading
+        font-size: 1.8rem
         margin-bottom: 1vh
+        margin-top: 2vh
     
 
 .pojects-cont-right , .pojects-cont-left
-    height: 22vh
+    height: 20vh
     width: 100%
     display: flex
     justify-content: space-between
@@ -13,7 +15,7 @@
 
     .cont-img
         z-index: 998
-        width: 50%
+        width: 44%
         opacity: 0
         .overlay
             position: relative
@@ -64,11 +66,12 @@
             justify-content: flex-end
             flex-wrap: wrap
             .techologi
-                background-color: $red
-                border-radius: 5px
+
                 margin-right: 2px
                 margin-top: 2px
                 .text-techo
+                    background-color: $red
+                    border-radius: 5px
                     margin: 0 
                     padding: 2px
                     font-size: 1rem
@@ -90,9 +93,11 @@
 
 @media (min-width: 1240px)
     .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
-        font-size: 3rem
+        font-size: 2rem
 
 @media (min-width: 1024px) and (max-width: 1240px)
+    .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
+        font-size: 2rem
 
 
 @media (min-width: 768px) and (max-width: 1024px)

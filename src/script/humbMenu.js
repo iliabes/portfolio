@@ -9,6 +9,36 @@ let hambScills = document.getElementById('hambScills')
 let humbContacts = document.getElementById('hambContacts')
 let buttonUp = document.getElementById('buttonUp')
 
+let topAbout = document.getElementById('topAbout')
+let topProjects = document.getElementById('topProjects')
+let topSkils = document.getElementById('topSkils')
+let topContacts = document.getElementById('topContacts')
+
+
+
+topAbout.addEventListener('click', function (event) {
+  changeSlide(0)
+  humbMenu.style.display = 'none'
+});
+
+
+topProjects.addEventListener('click', function (event) {
+  changeSlide(1)
+  humbMenu.style.display = 'none'
+});
+
+topSkils.addEventListener('click', function (event) {
+  changeSlide(2)
+  humbMenu.style.display = 'none'
+});
+
+
+topContacts.addEventListener('click', function (event) {
+  changeSlide(3)
+  humbMenu.style.display = 'none'
+});
+
+
 hambAbout.addEventListener('click', function (event) {
   changeSlide(0)
   humbMenu.style.display = 'none'
