@@ -1,9 +1,12 @@
 // import loader from  "./style/loader.css"
+import './script/curve' 
 import './script/preload'
 import './script/alert'
 import './script/swipe'
 import './script/humbMenu'
-import './script/animate' 
+import './script/animate'
+
+
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'

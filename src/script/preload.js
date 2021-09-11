@@ -1,5 +1,7 @@
-let loader = document.getElementById('loader')
+// let loader = document.getElementById('loader')
 
-window.onload = () => {
-    loader.style.display = 'none'
-}
+
+
+// window.onload = () => {
+//     loader.style.display = 'none'
+// }

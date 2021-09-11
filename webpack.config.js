@@ -2,10 +2,11 @@ const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const smp = new SpeedMeasurePlugin()
 
-const smp = new SpeedMeasurePlugin();
+
 
 module.exports = {
   mode: 'development',
@@ -76,8 +77,6 @@ module.exports = {
       }
     ]
   },
-
-  
 };
 
 
