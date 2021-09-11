@@ -116,20 +116,21 @@ class Animation {
       let _controlY2 = c[3 + i].getWave(); // personal control y2 for current curve
       let curveParam = {
         startX     : 0,
-        startY     : this.getYPlacementType(this.type4Start, i),
+        startY     : 12 * i,
         controlX1  : _controlX1, 
         controlY1  : _controlY1, 
         controlX2  : _controlX2, 
         controlY2  : _controlY2 * this.size.h, 
         endX       : this.size.w, 
-        endY       : this.getYPlacementType(this.type4End, i),
+        endY       : 0,
         alpha      : _controlY2,
         hue        : 360 / config.curvesNum * i
       }
-    
     this.drawCurve(curveParam);
     }
   }
+
+
   drawCurve({startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY, alpha, hue}) {
     this.ctx.lineWidth = 3;
     this.ctx.strokeStyle = `hsla(${hue}, 100%, 50%, ${alpha})`;
