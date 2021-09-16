@@ -2,39 +2,38 @@
 .about
     transform: translateX(-100vw)
     z-index: 1
-    .cont-top
-        // padding-top: 8vh
-    .cont
-        background-color: $back2
-        // display: grid
-        // padding-bottom: 140px
-        // grid-gap: 10px
+    .cont-about
+        background-color: $black2
+        grid-template-rows: 1fr 5fr
         .cont-header
             z-index: 2
             display: flex
-            justify-content: space-between
-        .curcle-img
-            width: 50%
-            grid-area: curcleImg
-            display: inline-block
-            animation: about-img-right 3s ease-in-out 
-            img
-                border-radius: 50%
-                box-shadow: 5px 5px 3px 0 black
-                width: 100%
-                height: 80%
-        .cont-text
-            width: 48%
-            .block-text
-                margin-left: 5%
-                p
-                    line-height: 6vh    
-                    letter-spacing: .4vh
-                    font-size: 4.25rem
-                    color: $violet
-                    color: #fff
-                    margin: 0
-
+            justify-content: space-around
+            .cont-curcle-img
+                // width: 40%
+                // height: 71%
+                width: 27vw
+                height: 50vh
+                grid-area: curcleImg
+                display: inline-block
+                animation: about-img-right 3s ease-in-out 
+                .img-aftar
+                    border-radius: 50%
+                    box-shadow: 5px 5px 3px 0 black
+                    width: 100%
+                    height: 100%
+            .cont-text
+                width: 48%
+                height: 71%
+                .block-text
+                    p
+                        line-height: 6vh    
+                        letter-spacing: .4vh
+                        font-size: 4.25rem
+                        color: $violet
+                        color: #fff
+                        margin: 0
+                        height: 100%
 
 .about .heading, .heading-close
     animation: heading 3s ease-in-out 
@@ -50,45 +49,154 @@
     z-index: 1
     border: 1px solid #000
 
-@media (min-width: 1240px)
-    .top-menu .humb-menu
-        display: none
 
-    .top-menu .top-item 
-        display: flex
+
+
+
+
+@media (min-width: 1240px)
+    .top-menu 
+        .humb-menu
+            display: none
+        .top-item 
+            display: flex
 
     .about .cont .cont-text .block-text .text-header
         line-height: 8vh
 
 @media (min-width: 1024px) and (max-width: 1240px)
-    .about .cont .cont-text .block-text .text-header
-        line-height: 9vh
+    .about
+        .cont-about
+            .cont-header
+                .cont-curcle-img
+                    width: 30vw
+                .cont-text 
+                    .block-text
+                        p
+                            line-height: 8vh
+                            font-size: 3.25rem 
+
+@media (min-width: 768px) and (max-width: 1024px) 
+    .about
+        .cont-about 
+            .cont-header
+                flex-direction: column
+                align-items: center
+                justify-content: start
+                gap: 2vh
+                .cont-curcle-img
+                    width: 31vw
+                .cont-text .block-text p
+                    line-height: 4.5vh
+                    font-size: 2.5rem 
+                    text-align: center
 
 
-@media (min-width: 768px) and (max-width: 1024px)
-    .about .cont .cont-text .block-text .text-header
-        line-height: 8vh
-        font-size: 3rem
-
-@media (min-width: 568px) and (max-width: 768px)
-    .about .cont .cont-text .block-text .text-header
-        line-height: 6vh
-        font-size: 2.5rem
-
-
-
-@media (max-width: 568px)
-    .about .cont .curcle-img img
-        width: 90%
-    .top-menu
-        height: 6vh
-    .about .cont .cont-text .block-text .text-header
-        line-height: 3vh
-        font-size: 1.8rem
-
-@media (max-width: 330px)
-    .about .cont .cont-text .block-text .text-header
-        line-height: 2.5vh
-        font-size: 1.5rem
+@media (min-width: 568px) and (max-width: 768px) 
+    .about
+        .cont-about 
+            .cont-header
+                flex-direction: column
+                align-items: center
+                justify-content: start
+                gap: 3vh
+                .cont-curcle-img
+                    width: 50vw
+                .cont-text 
+                    width: 80%
+                    .block-text p
+                        line-height: 5vh
+                        font-size: 3rem 
+                        text-align: center
 
 
+
+@media (max-width: 568px) 
+    .about
+        .cont-about 
+            .cont-header
+                flex-direction: column
+                align-items: center
+                justify-content: start
+                gap: 3vh
+                .cont-curcle-img
+                    height: 42vh
+                    width: 50vw
+                .cont-text 
+                    width: 80%
+                    .block-text p
+                        line-height: 5vh
+                        font-size: 2.5rem 
+                        text-align: center
+
+@media (max-width: 420px) 
+    .about
+        .cont-about 
+            .cont-header
+                flex-direction: column
+                align-items: center
+                justify-content: start
+                gap: 3vh
+                .cont-curcle-img
+                    height: 38vh
+                    width: 60vw
+                .cont-text 
+                    width: 80%
+                    .block-text p
+                        line-height: 4vh
+                        font-size: 2.5rem 
+                        text-align: center
+
+
+@media (max-width: 330px) 
+    .about
+        .cont-about 
+            .cont-header
+                flex-direction: column
+                align-items: center
+                justify-content: start
+                gap: 3vh
+                .cont-curcle-img
+                    height: 22vh
+                    width: 66vw
+                .cont-text 
+                    width: 80%
+                    .block-text p
+                        line-height: 3vh
+                        font-size: 1.5rem 
+                        text-align: center
+
+
+
+
+@media screen and (max-width: 900px) and (orientation: landscape)
+    .about
+        .cont-about 
+            .cont-header
+                .cont-curcle-img
+                    height: 41vh
+                    width: 26vw
+                .cont-text 
+                    width: 80%
+                    .block-text p
+                        line-height: 5vh
+                        font-size: 1.5rem 
+                        text-align: center
+
+
+@media screen and (max-width: 375px) and (orientation: landscape)
+    .about
+        .cont-about 
+            .heading
+                font-size: 2rem
+                margin: 0 1vh
+            .cont-header
+                .cont-curcle-img
+                    height: 41vh
+                    width: 26vw
+                .cont-text 
+                    width: 80%
+                    .block-text p
+                        line-height: 5vh
+                        font-size: 2rem 
+                        text-align: center

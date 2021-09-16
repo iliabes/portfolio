@@ -2,24 +2,23 @@
     z-index: 3
     .cont
         background-color: rgb(13,17,23)
+        grid-gap: 1vh
         .set-skil
             opacity: 0
-            margin-bottom: 3vh
+            // margin-bottom: 3vh
             display: flex
             flex-direction: column
-            gap: 10px
+            gap: 1vh
             .cont-title
                 background-color: $violet
-                width: 95px
-                height: 25px
+                width: 9vw
+                height: 4vh
                 display: flex
                 align-items: center
                 justify-content: center
                 border-radius: 7px
                 .title-ckil
-                    font-size: 21px
-                    padding: 5px 10px
-
+                    font-size: 1.5rem
             .skill-bar
                 height: 4px
                 width: 100%
@@ -56,57 +55,100 @@
                             
 
 
-@media (min-width: 1240px)
-    .scils .cont .set-skil .cont-technologis .cont-techno .technologi
-        height: 3.9vh
-        width: 2.2vw
-
-    .scils .cont .set-skil .cont-technologis .cont-techno
-        margin-right: 1%
 
 
 @media (min-width: 1024px) and (max-width: 1240px)
-
+    .scils .cont 
+            .set-skil 
+                .cont-title
+                    width: 11vw
+                .cont-technologis .cont-techno .technologi
+                        width: 3vw
+                        height: 4vh
+                        margin: 5px
 
 @media (min-width: 768px) and (max-width: 1024px)
-
-    .scils .cont .set-skil .cont-technologis .cont-techno
-        margin-right: 3%
+    .scils .cont 
+            .heading
+                margin-top: 2vh
+            .set-skil 
+                .cont-title
+                    width: 12vw
+                .cont-technologis .cont-techno .technologi
+                        width: 3vw
+                        height: 4vh
+                        margin: 5px
 
 
 @media (min-width: 568px) and (max-width: 768px)
-
-
-    .scils .cont .set-skil .cont-technologis .cont-techno .technologi
-        width: 3.4vw
-        height: 3.3vh
-
-    .scils .cont .set-skil .cont-technologis .cont-techno
-        margin-right: 3%
-
+    .scils .cont 
+            .set-skil 
+                .cont-title
+                    width: 14vw
+                .cont-technologis .cont-techno .technologi
+                        width: 6vw
+                        height: 4vh
+                        margin: 5px
 
     
 @media (max-width: 568px)
+    .scils .cont 
+            .heading
+                margin-top: 2vh
+            .set-skil 
+                .cont-title
+                    width: 20vw
+                .cont-technologis .cont-techno .technologi
+                        width: 7vw
+                        height: 2.3vh
+                        margin: 5px
 
-
-    .scils .cont .set-skil .cont-technologis .cont-techno
-        margin-right: 3%
-
-    .scils .cont .set-skil .cont-technologis .cont-techno .technologi
-        width: 6vw
-        height: 4vh
-        margin: 8px
-    
-    .pojects-cont-right .cont-sign .cont-techologi .techologi p, .pojects-cont-left .cont-sign .cont-techologi .techologi p
-        font-size: 11px
-
-
+@media (max-width: 400px)
+    .scils .cont 
+            .heading
+                margin-top: 2vh
+            .set-skil 
+                .cont-title
+                    width: 20vw
+                .cont-technologis .cont-techno .technologi
+                        width: 7vw
+                        height: 2.3vh
+                        margin: 5px
 
 @media (max-width: 300px)
+    .scils .cont 
+            .set-skil 
+                .cont-title
+                    width: 20vw
+                .cont-technologis .cont-techno .technologi
+                        width: 7vw
+                        height: 2.3vh
+                        margin: 5px
+
+@media (max-width: 250px)
+    .scils 
+        .cont 
+            .set-skil 
+                .cont-title
+                    width: 20vw
+                .cont-technologis .cont-techno .technologi
+                        width: 7vw
+                        height: 2.3vh
+                        margin: 5px
 
 
-    .scils .cont .set-skil .cont-technologis .cont-techno .technologi
-        width: 7vw
-        height: 2.3vh
-        margin: 5px
 
+@media screen and  (max-width: 900px) and (orientation: landscape)
+    .scils 
+
+        .cont 
+            grid-gap: 2vh
+            .set-skil 
+                .cont-title
+                    width: 9vw
+                    .title-ckil
+                        font-size: 1rem
+                .cont-technologis .cont-techno .technologi
+                        width: 1.5vw
+                        height: 2.5vh
+                        margin: 5px

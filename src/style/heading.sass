@@ -2,19 +2,10 @@
     font-size: 2.25rem
     color: gold
     position: relative
-    margin-left: 40px
     font-family: Roboto
-    margin: 4vh 0
     align-self: center
     text-align: center
-    &::before
-        content: '<'
-        color: #ffffff
-        margin-right: 3px
-    &::after
-        content: '>'
-        color: #ffffff
-        margin-left: 3px
+
 
 
 .heading-close
@@ -39,3 +30,13 @@
 @media (max-width: 330px)
     .heading, .heading-close
         font-size: 1.2rem
+        margin-top: 4vh
+
+@media (max-width: 250px)
+    .heading
+        margin-top: 4vh
+
+@media screen and  (max-width: 900px) and (orientation: landscape)
+    .heading
+        font-size: 1.5rem
+        margin: 1vh 0

@@ -1,7 +1,7 @@
 document.addEventListener('touchstart',(e)=>{touchStart(e)})
 document.addEventListener('touchmove',(e)=>{touchMove(e)})
 document.addEventListener('touchend',(e)=>{touchEnd(e)})
-import {moveLeft, moveRight} from './alert'
+import {moveLeft, moveRight} from './switchSlide'
 
 let x1 = 0;
 let y1 = 0;

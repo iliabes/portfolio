@@ -1,9 +1,9 @@
 
 .potrfolio
+    background-color: $black2
     .heading
         font-size: 1.8rem
-        margin-bottom: 1vh
-        margin-top: 2vh
+        margin: 1vh 0
     
 
 .pojects-cont-right , .pojects-cont-left
@@ -12,10 +12,9 @@
     display: flex
     justify-content: space-between
     margin-top: 4vh
-
     .cont-img
-        z-index: 998
-        width: 44%
+        width: 25vw
+        height: 100%
         opacity: 0
         .overlay
             position: relative
@@ -29,7 +28,8 @@
                 border-radius: 15px
                 transition: .5s
             .img-portfolio 
-                height: 25vh
+                // height: 25vh
+                height: 20vh
                 border-radius: 2px
                 width: 100%
                 border-radius: 15px
@@ -42,13 +42,10 @@
                 text-align: center
             &:hover::before
                 opacity: 0
-
-
     .cont-sign
-        // transform: translateX(-300px)
         padding: 1vh
         box-sizing: border-box
-        width: 49%
+        width: 25vw
         display: flex
         flex-direction: column
         justify-content: space-around
@@ -56,7 +53,8 @@
         opacity: 0
         .sign-project
             margin: 0
-            font-size: 2rem
+            font-size: 1.5rem
+            color: #fff
             .gold
                 color: gold
                 ont-size: 2.1rem
@@ -89,42 +87,123 @@
 .potrfolio
     z-index: 1
     transition: 1s
-    background-color: grey
 
-@media (min-width: 1240px)
-    .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
-        font-size: 2rem
+
 
 @media (min-width: 1024px) and (max-width: 1240px)
-    .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
-        font-size: 2rem
+    .potrfolio
+        .pojects-cont-right , .pojects-cont-left
+            .cont-sign
+                width: 35vw
+                .sign-project
+                    font-size: 1.3rem
+            .cont-img
+                width: 35vw
+
 
 
 @media (min-width: 768px) and (max-width: 1024px)
-    .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
-        font-size: 1.5rem
+    .potrfolio
+        .pojects-cont-right , .pojects-cont-left
+            .cont-sign
+                width: 40vw
+                .sign-project
+                    font-size: 1.3rem
+            .cont-img
+                width: 40vw
+
 
 
 
 @media (min-width: 568px) and (max-width: 768px)
-    .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
-        font-size: 1.3rem
-    
-    .pojects-cont-right .cont-sign .cont-techologi .techologi .text-techo , .pojects-cont-left .cont-sign .cont-techologi .techologi .text-techo
-        font-size: 0.8rem
+    .potrfolio
+        .pojects-cont-right , .pojects-cont-left
+            .cont-sign
+                width: 40vw
+                .sign-project
+                    font-size: 1.1rem
+                .cont-techologi .techologi .text-techo
+                    font-size: 0.8rem
+            .cont-img
+                width: 40vw
+
 
 @media (max-width: 568px)
-    .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
-        font-size: 1rem
+    .potrfolio
+        .pojects-cont-right , .pojects-cont-left
+            .cont-sign
+                width: 43vw
+                .sign-project
+                    font-size: 1rem
+                .cont-techologi
+                    .text-techo
+                        font-size: 0.5rem
+            .cont-img
+                width: 43vw
 
-    .pojects-cont-right .cont-sign .cont-techologi .techologi .text-techo , .pojects-cont-left .cont-sign .cont-techologi .techologi .text-techo
-        font-size: 0.4rem
 
-@media (max-width: 350px)
-    .pojects-cont-right .cont-sign .sign-project, .pojects-cont-left .cont-sign .sign-project
-        font-size: .6rem
+@media (max-width: 400px)
+    .potrfolio
+        .heading
+            margin-top: 3vh
+        .pojects-cont-right , .pojects-cont-left
+            .cont-sign
+                width: 43vw
+                .sign-project
+                    font-size: .9rem
+                .cont-techologi .techologi .text-techo
+                    font-size: 0.3rem
+            .cont-img
+                width: 43vw
+                .overlay .sign-img
+                    font-size: 1rem
 
-    .pojects-cont-right .cont-sign .cont-techologi .techologi .text-techo , .pojects-cont-left .cont-sign .cont-techologi .techologi .text-techo
-        font-size: 0.5rem
+@media (max-width: 300px)
+    .potrfolio
+        .pojects-cont-right , .pojects-cont-left
+            .cont-sign
+                width: 43vw
+                .sign-project
+                    font-size: 1rem
+                .cont-techologi .techologi .text-techo
+                    font-size: 0.3rem
+            .cont-img
+                width: 43vw
+                .overlay .sign-img
+                    font-size: 1rem
 
+
+@media (max-width: 250px)
+    .potrfolio
+        .pojects-cont-right , .pojects-cont-left
+            .cont-sign
+                width: 40vw
+                .sign-project
+                    font-size: .8rem
+                .cont-techologi .techologi .text-techo
+                    font-size: 0.3rem
+            .cont-img
+                width:40vw
+                .overlay .sign-img
+                    font-size: 1rem
+
+
+
+@media (orientation: landscape) and (max-width: 900px) 
+    .potrfolio
+        .heading
+            font-size: 1.2rem
+        .pojects-cont-right , .pojects-cont-left
+            .cont-sign
+                width: 30vw
+                .sign-project
+                    font-size: .8rem
+                .cont-techologi .techologi .text-techo
+                    font-size: 0.5rem
+                .cont-techologi
+            .cont-img
+                width: 30vw
+                .sign-img
+                    font-size: 1.8rem
+   
 
