@@ -1,14 +1,80 @@
+@import "./style/loader.css"
 @import "~normalize.css"
 @import "roboto.css"
 @import "./style/color"
 @import  "./style/cont"
+@import  "./style/topMenu"
 @import  "./style/heading"
 @import  "./style/about/about.sass"
 @import  "./style/project/projects.sass"
+@import  "./style/contacts/contacts.sass"
+@import  "./style/humbMenu"
+@import  "./style/scils/scils.sass"
+@import "./style/animate"
 
+html
+    font-size: 16px
 
+body
+    overflow: hidden
+    background-color: $back
+    font-family: 'Roboto' , sans-serif
 
+.main
+    position: fixed
+    display: flex
+    flex-direction: row
+    transition: 1s
+    section
+        left: 100vw
+        position: absolute
+        width: 100vw
+        height: 100vh
+        transition: 1s
+        &::before
+            content: '◀'
+            position: absolute
+            left: 0
+            bottom: 50%
+            height: 3vh
+            width: 3vw
+            color: #ffffff
+            z-index: 10
+            font-size: 2rem
+            opacity: .3
+        &::after
+            content: '▶'
+            position: absolute
+            right: 0
+            bottom: 50%
+            height: 3vh
+            width: 3vw
+            color: #ffffff
+            z-index: 10
+            font-size: 2rem
+            opacity: .3
+            &:hover
+                width: 3.5vw
+                opacity: .7
+        &:first-child::before
+            display: none
+        &:last-child::after
+            display: none
 
+    
 
+@media (min-width: 1240) 
 
+@media (min-width: 1024px) and (max-width: 1240px)
 
+@media (min-width: 768px) and (max-width: 1024px)
+
+@media (min-width: 568px) and (max-width: 1024px)
+
+@media (max-width: 568px)
+    html
+        font-size: 14px
+
+@media (max-width: 300px)
+    html
+        font-size: 10px

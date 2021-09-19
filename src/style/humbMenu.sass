@@ -1,0 +1,49 @@
+.humb-menu
+    transition: 1s
+    opacity: 1
+    display: none
+    position: absolute
+    width: 100vw
+    height: 100vh
+    background-color: #020202
+    z-index: 10
+    .top-line
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 5vh
+        padding: 10px
+        .logo
+            font-size: 20px
+            color: $white
+        .cont-icon-cross
+
+        .icon
+            color: $white
+            font-size: 30px
+    .cont-humb
+        box-sizing: border-box
+        padding: 5% 16%
+        width: 100%
+        height: 100%
+        .cont-point
+            height: 10vh
+            padding: 2vh
+            display: flex
+            justify-content: center
+            align-items: center
+            // text-align: center
+            transition: 1s
+            &:hover
+                background-color: #373232
+                .points
+                    font-size: 31px
+                    color: #ffffff
+            .points
+                transition: 1s
+                align-items: center
+                font-size: 24px
+                color: $gold
+                padding: 3vh 0
+                .white-points
+                    color: #fff

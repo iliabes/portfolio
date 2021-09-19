@@ -1,0 +1,169 @@
+.scils
+    z-index: 3
+    background-color: rgb(13,17,23)
+    .cont
+        
+        grid-gap: 1vh
+        .set-skil
+            opacity: 0
+            display: flex
+            flex-direction: column
+            gap: 1vh
+            .cont-title
+                background-color: $violet
+                width: 9vw
+                height: 4vh
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 7px
+                &:hover
+                    box-shadow: 0 0 10px 0 $violet inset, 0 0 10px 4px $violet
+                .title-ckil
+                    font-size: 1.5rem
+            .skill-bar
+                height: 4px
+                width: 100%
+                background-color: grey
+                display: inherit
+                .skill-active
+                    height: 4px
+                    background-color: #f709fb
+                    width: 0
+                    animation-duration: 3s 
+                // &::before
+                //     position: absolute
+                //     content: ""
+                //     width: 50%
+                //     height: 4px
+                //     background-color: $violet
+
+            .cont-technologis
+                .cont-techno
+                    opacity: 0
+                    margin-right: 1vw
+                    border: 1px solid $violet
+                    background-color: $violet
+                    background-color: #dd2de017
+                    border-radius: 4px
+                    display: inline-block
+                    flex-wrap: wrap
+                    box-shadow:  2px 2px 4px #000
+                    
+                    &:hover 
+
+                    &:hover .technologi 
+                        transform: translateY(-10px)
+                        box-shadow:  0px 6px 6px #e00d6d
+                    .technologi
+                        transition: all 0.4s ease-in-out
+                        width: 2vw
+                        height: 3.5vh
+                        margin: 11px
+
+
+                .cont-dis
+                    display: inline-block
+                    margin-left: 5%
+                    .grey-cont
+                        background-color: #80808015
+                        border: 1px solid grey
+                            
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1240px)
+    .scils .cont 
+            .set-skil 
+                .cont-title
+                    width: 11vw
+                .cont-technologis .cont-techno .technologi
+                        width: 45px
+                        height: 50px
+                        margin: 5px
+
+@media (min-width: 768px) and (max-width: 1024px)
+    .scils .cont 
+            .heading
+                margin-top: 2vh
+            .set-skil 
+                .cont-title
+                    width: 12vw
+                .cont-technologis .cont-techno .technologi
+                        width: 30px
+                        height: 30px
+                        margin: 5px
+
+
+@media (min-width: 568px) and (max-width: 768px)
+    .scils .cont 
+            .set-skil 
+                .cont-title
+                    width: 14vw
+                .cont-technologis .cont-techno .technologi
+                        width: 20px
+                        height: 20px
+                        margin: 5px
+
+    
+@media (max-width: 568px)
+    .scils .cont 
+            .heading
+                margin-top: 2vh
+            .set-skil 
+                .cont-title
+                    width: 9vh
+                .cont-technologis .cont-techno .technologi
+                        width: 16px
+                        height: 2.3vh
+                        margin: 5px
+
+@media (max-width: 400px)
+    .scils .cont 
+            .heading
+                margin-top: 2vh
+            .set-skil 
+                .cont-title
+                    width: 20vw
+                .cont-technologis .cont-techno .technologi
+                        width: 12px
+                        height: 2.3vh
+                        margin: 5px
+
+@media (max-width: 300px)
+    .scils .cont 
+            .set-skil 
+                .cont-title
+                    width: 20vw
+                .cont-technologis .cont-techno .technologi
+                        width: 11px
+                        height: 2.3vh
+                        margin: 5px
+
+@media (max-width: 250px)
+    .scils 
+        .cont 
+            .set-skil 
+                .cont-title
+                    width: 20vw
+                .cont-technologis .cont-techno .technologi
+                        width: 11px
+                        height: 2.3vh
+                        margin: 5px
+
+
+
+@media screen and  (max-width: 900px) and (orientation: landscape)
+    .scils 
+        .cont 
+            grid-gap: 2vh
+            .set-skil 
+                .cont-title
+                    width: 9vw
+                    .title-ckil
+                        font-size: 1rem
+                .cont-technologis .cont-techno .technologi
+                        width: 1.5vw
+                        height: 2.5vh
+                        margin: 5px

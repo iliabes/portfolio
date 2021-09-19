@@ -1,0 +1,220 @@
+.contacts
+    position: relative
+    background-color: $black2
+    z-index: 4
+    
+    .cont
+        align-items: start
+        height: 88vh
+        .quet
+            opacity: 0
+            color: $violet
+            font-size: 2rem
+            text
+            transition: all .4s ease-in-out
+            &:hover
+                letter-spacing: 1px
+                tdu
+        .cont-input
+            opacity: 0
+            display: flex
+            flex-direction: column
+            margin-top: 1vh
+            width: 100%
+            &:hover
+                box-shadow: 0 0 10px 0 #e74c3c inset, 0 0 10px 4px #DD2DE0  
+            &:last-child:hover
+                box-shadow: none
+            .text-inp
+                background-color: #3C253E
+                width: 100%
+                border: none
+                border-bottom: 1px solid $violet
+                height: 3vh
+            .label-input
+                position: absolute
+                // left: 88px
+                color: rgb(63,75,180)
+                font-size: 12px
+                margin-top: 11px
+            .area
+                height: 10vh
+        .submit
+            width: 200px
+            font-size: 16px
+            font-weight: 600
+            color: #fff
+            cursor: pointer
+            margin: 20px 0
+            height: 55px
+            text-align:center
+            border: none
+            background-size: 300% 100%
+            border-radius: 50px
+            background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7)
+            box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75)
+            align-self: flex-end
+            &:hover
+                background-position: 100% 0
+                transition: all .4s ease-in-out
+                &:focus
+                    outline: none
+
+
+    .footer
+        position: relative
+        bottom: 0
+        left: 0
+        background-color: #020202
+        width: 100%
+        height: 12vh
+        display: flex
+        flex-direction: column
+        align-items: center
+        .buttonUp
+            position: absolute
+            bottom: -12px
+            height: 50px
+            width: 37px
+            background: linear-gradient(64deg, transparent 51%, #f66 35%, #f66 65%, transparent 65%),linear-gradient(-64deg, transparent 51%, #f66 35%, #f66 65%, transparent 65%)
+            background-position: 100% 0, 0 0
+            background-repeat: repeat-y
+            background-size: 1.8em 1.8em
+            display: block
+            margin: 100px
+            border: 1px solid #f66
+            border-radius: 2px
+            &:hover 
+                animation: backToTop .6s infinite linear
+                    border: 1px solid #fa4c4c
+        .cont-icon
+            margin-top: 3vh
+            display: inline-block
+            .icon
+                color: #ffffff
+                width: 20px
+                height: 20px
+                margin-left: 20px
+                &:hover
+                    transition: all 0.1s ease-in-out
+                    transform: scale(2)
+
+   
+    
+
+
+@keyframes backToTop 
+    100%  
+        background-position: 100% -30px, 0 -30px
+
+@media (min-width: 1024px) and (max-width: 1240px)
+    .contacts .footer .buttonUp
+        height: 38px
+        width: 36px
+
+@media (min-width: 768px ) and (max-width: 1024px)
+    .contacts .footer .buttonUp
+        bottom: 19px
+        height: 38px
+        width: 36px
+
+@media (min-width: 568px) and (max-width: 768px )
+    .contacts .footer .buttonUp
+
+        height: 38px
+        width: 36px
+
+@media (max-width: 568px)
+    .contacts .footer .buttonUp
+        bottom: -28px
+        height: 36px
+        width: 32px
+
+@media (max-width: 400px)
+    .contacts
+        .cont
+            grid-gap: 1px
+            .quet
+                font-size: 1.5rem
+                margin: 0
+            .cont-input 
+                margin: 0
+                .text-inp
+                    height: 5vh
+                .area
+                    height: 7vh
+    .contacts .footer .buttonUp
+                bottom: -40px
+                height: 38px
+                width: 36px
+
+
+@media (max-width: 300px)
+    .contacts
+        .cont
+            .quet
+                font-size: 2rem
+                margin: 0
+            .cont-input 
+                margin: 0
+                .text-inp
+                    height: 5vh
+                .area
+                    height: 7vh
+        .footer
+            .buttonUp 
+                height: 36px
+                width: 25px
+
+@media (max-width: 250px)
+    .contacts
+        .cont
+            .quet 
+                font-size: 1.5rem
+            .cont-input 
+                margin: 0
+                .text-inp
+                    height: 6vh
+  
+        .footer
+            height: 12vh
+            .buttonUp 
+   
+                height: 36px
+                width: 25px
+
+
+
+
+@media screen and  (max-width: 900px) and (orientation: landscape)
+    .contacts
+        .cont
+            grid-gap: 3vh
+            .quet 
+                margin: 0
+                font-size: 1.1rem
+            .cont-input 
+                margin: 0
+                .text-inp
+                    height: 5vh
+                .area
+                    height: 10vh
+
+        .footer
+            height: 12vh
+            .buttonUp 
+                bottom: -68px
+
+// margin-top: 1vh
+// border: 1px solid #6850d2
+// display: inline-block
+// border-radius: 50px
+// // background-color: #3F4BB4
+// align-self: flex-end
+// color: #fff
+// padding: 7px 50px
+// text-align:center
+// transition: all .4s ease-in-out
+// background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed)
+// box-shadow: 0 4px 10px 0 rgba(65, 132, 234, 0.75)
+// background-position: 0% 0

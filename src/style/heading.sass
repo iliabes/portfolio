@@ -1,19 +1,83 @@
 .heading ,.heading-close
-    font-size: 36px
+    font-size: 2.25rem
     color: gold
     position: relative
-    margin-left: 40px
     font-family: Roboto
-    margin: 30px 0
-    &::before
-        content: '<'
-        color: #ffffff
-        margin-right: 3px
-    &::after
-        content: '>'
-        color: #ffffff
-        margin-left: 3px
+    align-self: center
+    text-align: center
+    position: relative
+    transition:  1s
+    margin: 0
+    &:hover
+        color: white
+    &:hover .brackets
+        margin: 0 3vw
+        color: gold
+    .brackets
+        transition:  1s
+        color: #FFF
+        margin: 0 1vw
 
+    &:before
+        transition:  1s
+        width: 100%
+        height: 1px
+        background-color: #fff
+        left: 27%
+        color: #fff
+        height: 1px
+        content: ''
+        position: absolute
+        width: 0%
+    &:after
+        transition:  1s
+        bottom: -2px
+        right: 30%
+        color: #fff
+        content: ''
+        position: absolute
+        width: 10%
+        height: 1px
+        width: 0%
+        background-color: #fff
+    &:hover:after
+        background-color: gold
+        right: 38%
+        width: 20%
+    &:hover:before
+        background-color: gold
+        left: 38%
+        width: 20%
 
 .heading-close
     display: none
+
+@media (min-width: 1240px)
+    .heading, .heading-close
+
+        font-size: 2rem
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+@media (min-width: 568px) and (max-width: 768px)
+    .heading, .heading-close
+        font-size: 2rem
+  
+
+@media (max-width: 568px)
+    .heading, .heading-close
+        font-size: 1.5rem
+
+@media (max-width: 330px)
+    .heading, .heading-close
+        font-size: 1.2rem
+        margin-top: 4vh
+
+@media (max-width: 250px)
+    .heading
+        margin-top: 4vh
+
+@media screen and  (max-width: 900px) and (orientation: landscape)
+    .heading
+        font-size: 1.5rem
+        margin: 1vh 0
