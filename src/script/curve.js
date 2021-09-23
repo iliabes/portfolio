@@ -2,31 +2,6 @@
 let about = document.getElementById('portfolio')
 let loader = document.getElementById('loader')
 
-// import * as PIXI from 'pixi.js'
-
-// let app = new PIXI.Application({ 
-//     width: window.innerWidth,         // default: 800
-//     height: window.innerHeight - 50,        // default: 600
-//     antialias: true,    // default: false
-//     transparent: false, // default: false
-//     resolution: 1       // default: 1
-//   }
-// );
-
-
-// let rectangle = new PIXI.Graphics();
-// rectangle.lineStyle(4, 0xFF3300, 1);
-// rectangle.beginFill(0x66CCFF);
-// rectangle.drawRect(0, 0, 64, 64);
-// rectangle.endFill();
-// rectangle.x = 170;
-// rectangle.y = 170;
-// app.stage.addChild(rectangle);
-
-// document.body.appendChild(app.view);
-
-
-//Attention! My english is bad...  :D
 const config = {
     curvesNum    : 40,
     waveSpeed    : .5,
@@ -75,19 +50,25 @@ const config = {
       this.frameCounter = 0;
       this.type4Start = 0;
       this.type4End = 0;
+      this.colorLight = '#c4c0d3'
+      this.colorLight = '#fff'
+      this.colorDark = '#000'
+      this.colorNow = 'dark'
+      this.dark = document.getElementById('darkMode')
+      this.hambSwithDark = document.getElementById('hambSwithDark')
     }
     init() {                    //point of entry
       this.createCanvas();
       this.createControls();
       this.updateAnimation();
-      this.changeColor()
     }
     createCanvas() {
     this.ctx = this.cnv.getContext('2d');
-    
-    console.log(this.ctx)
     this.setCanvasSize();
     window.addEventListener(`resize`, () => this.setCanvasSize());
+    this.hambSwithDark.addEventListener('click',()=>{this.changeColor(this.colorNow)})
+    this.dark.addEventListener('click',()=>{this.changeColor(this.colorNow)})
+    
     }
 
     setCanvasSize() {
@@ -108,6 +89,19 @@ const config = {
     updateControls() {
       this.controls.forEach( e => e.update() );
     }
+    changeColor(colorNow){
+      switch(colorNow){
+        case 'dark':
+          this.ctx.fillStyle = this.colorLight;
+          this.colorNow = 'light';
+          break;
+        case 'light':
+          this.ctx.fillStyle = this.colorDark;
+          this.colorNow = 'dark';
+          break;
+      }
+    }
+
     // get current type placement for Curve start and for Curve end 
     getYPlacementType(type, i) {  //type recorded in (this.type4Start, this.type4End) animation properties
       if (type > .6) {
@@ -158,12 +152,7 @@ const config = {
       this.ctx.fillRect(0, 0, this.size.w, this.size.h);
       
     }
-    changeColor(){
-      let dark = document.getElementById('darkMode')
-      console.log(dark)
-      dark.addEventListener('click',()=>{this.ctx.fillStyle = "orange"})
-      ;
-    }
+
     updateFrameCounter() {
       this.frameCounter = (this.frameCounter + 1) % config.framesToMove;
       if (this.frameCounter === 0) {

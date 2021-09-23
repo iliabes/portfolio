@@ -16,10 +16,10 @@
 <!-- humbMenu-------------------------- -->
 <div id='humbMenu' class='humb-menu'>
   
-  <div  class="top-line"><div class="logo">Bes</div><div id='buttonCros' class="cont-icon-cross"><i  class="fa fa-times icon" aria-hidden="true"></i></div></div>
-  <div class="cont-humb">
+  <div   class="top-line"><div class="logo">Bes</div><div id='buttonCros' class="cont-icon-cross"><i  class="fa fa-times icon" aria-hidden="true"></i></div></div>
+  <div id="contHumb" class="cont-humb">
       <div class="cont-point">
-        <p id='hambAbout' class="points"><span class="white-points"><</span>About<span class="white-points">/></span></p>
+        <p data-lang='Обо мне' id='hambAbout' class="points"><span class="white-points"><</span>About<span class="white-points">/></span></p>
       </div>
       <div class="cont-point">
         <p id='hambProjects' class="points"><span class="white-points"><</span>Projects<span class="white-points">/></span></p>
@@ -30,13 +30,19 @@
       <div class="cont-point">
         <p id='hambContacts' class="points"><span class="white-points"><</span>Contacts<span class="white-points">/></span></p>
       </div>
+      <div class="cont-point">
+        <p id='hambSwitchLang' class="points"><span class="white-points"><</span>Ru<span class="white-points">/></span></p>
+      </div>
+      <div class="cont-point">
+        <p id='hambSwithDark' class="points"><span class="white-points"><</span><i  class="fas fa-adjust"></i><span class="white-points">/></span></p>
+      </div>
   </div>
 </div>
 
 
 <!-- ----------top-menu-------------------------------------- -->
     <div id='topLine' class="top-menu">
-      <button  class="logo btn ">Bes <img class="devil" src="./img/icon/demon5.png" alt=""></button>
+      <button  id='logo' class="logo btn ">Bes <img class="devil" src="./img/icon/demon5.png" alt=""></button>
       <button class="btn  humb-menu-icon cont-icon-bmenu" id='buttonMenu' ><i  class="fas fa-hamburger "></i></button>
       <div class="top-item">
         <button id='topAbout' class="btn ">About </button>
@@ -54,7 +60,7 @@
     <section  id="about"  class="about">
       <div class="cont cont-about">
         <canvas class="canvas" id="canvas"></canvas>
-        <h1 class="heading"><span class='brackets'><</span>About me<span class='brackets'>></span></h1>
+        <h1 data-lang="Обо мне" class="heading"><span class='brackets'><</span>About me<span class='brackets'>></span></h1>
         <div class="cont-header">
           <div  class="cont-curcle-img">
             <img class="img-aftar" src="./img/port.jpg" alt="">
@@ -68,6 +74,7 @@
         </div>
       </div>
     </div>
+    <div class="arrow arrow-right"></div>
     </section>
 
 
@@ -75,14 +82,21 @@
     <section  id='portfolio' class="potrfolio">
       
       <div class="cont">
-      <h1  class="heading"><span class='brackets'><</span>My projects<span class='brackets'>></span></h1>
+      <h1 data-lang="Мои проекты"  class="heading"><span class='brackets'><</span>My projects<span class='brackets'>></span></h1>
 
       <div   class="pojects-cont-right">
         <div data-order="0" data-anim="proj-img-right" class="cont-img">
-            <img   class="img-portfolio " src="./img/3.png" alt="">
-            <figcaption>
-              <h2>Lynn  <span> Reyes</span></h2>
-            </figure>
+            
+            <div class="hoverCurtain">
+              <img   class="img-portfolio " src="./img/3.png" alt="">
+              <div class="curtain curtain-left"></div>
+              <div class="curtain curtain-right"></div>
+              <figcaption>
+                <h2>Lynn  <span> Reyes</span></h2>
+              </figcaption>
+            </div>
+            
+
         </div>
 
         <div data-order="3" data-anim="proj-sign-right" class="cont-sign">
@@ -98,7 +112,7 @@
       </div>
 
 
-      <div    class="pojects-cont-left ">
+      <div  class="pojects-cont-left ">
         <div data-order="3" data-anim="proj-sign-left" class="cont-sign">
         <p   class="sign-project"><span class="gold"> Drop todo </span> - прилолжения для планирования bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
         <div class="cont-techologi">
@@ -108,18 +122,26 @@
         </div>  
       </div>
       <div data-order="1" data-anim="proj-img-right" class="cont-img">
-        <div class="overlay">
-          <span class="sign-img">Drop Todo</span>
+        <div class="hoverCurtain">
           <img class="img-portfolio" src="./img/1.jpg" alt="">
+          <div class="curtain curtain-left"></div>
+          <div class="curtain curtain-right"></div>
+          <figcaption>
+            <h2>Lynn  <span> Reyes</span></h2>
+          </figcaption>
         </div>
       </div>
       </div>
 
       <div  class="pojects-cont-right ">
         <div data-order="2" data-anim="proj-img-left" class="cont-img">
-          <div class="overlay">
-            <span class="sign-img">Drop Todo</span>
+          <div class="hoverCurtain">
             <img class="img-portfolio" src="./img/2.jpg" alt="">
+            <div class="curtain curtain-left"></div>
+            <div class="curtain curtain-right"></div>
+            <figcaption>
+              <h2>Lynn  <span> Reyes</span></h2>
+            </figcaption>
           </div>
         </div>
         <div data-order="3" data-anim="proj-sign-right" class="cont-sign">

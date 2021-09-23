@@ -1,5 +1,6 @@
 import {changeSlide} from './switchSlide'
 
+let logo =  document.getElementById('logo')
 let buttonCros = document.getElementById('buttonCros')
 let buttonMenu = document.getElementById('buttonMenu')
 let humbMenu = document.getElementById('humbMenu')
@@ -24,6 +25,7 @@ function addChangeSlide(switchElem,slide){
   });
 }
 
+addChangeSlide(logo,0)
 addChangeSlide(topAbout,0)
 addChangeSlide(buttonUp,0)
 addChangeSlide(hambAbout,0)

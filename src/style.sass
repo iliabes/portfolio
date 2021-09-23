@@ -1,6 +1,7 @@
 @import "./style/loader.css"
 @import "~normalize.css"
 @import "roboto.css"
+// @import "./style/font"
 @import "./style/color"
 @import  "./style/cont"
 @import  "./style/topMenu"
@@ -11,6 +12,7 @@
 @import  "./style/humbMenu"
 @import  "./style/scils/scils.sass"
 @import "./style/animate"
+@import "./style/arrow"
 
 html
     font-size: 16px
@@ -31,35 +33,7 @@ body
         width: 100vw
         height: 100vh
         transition: 1s
-        &::before
-            content: '◀'
-            position: absolute
-            left: 0
-            bottom: 50%
-            height: 3vh
-            width: 3vw
-            color: #ffffff
-            z-index: 10
-            font-size: 2rem
-            opacity: .3
-        &::after
-            content: '▶'
-            position: absolute
-            right: 0
-            bottom: 50%
-            height: 3vh
-            width: 3vw
-            color: #ffffff
-            z-index: 10
-            font-size: 2rem
-            opacity: .3
-            &:hover
-                width: 3.5vw
-                opacity: .7
-        &:first-child::before
-            display: none
-        &:last-child::after
-            display: none
+
 
     
 

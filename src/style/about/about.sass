@@ -30,7 +30,7 @@
                 width: 48%
                 height: 71%
                 .block-text
-                    p
+                    .text-header
                         line-height: 6vh    
                         letter-spacing: .4vh
                         font-size: 4.25rem
@@ -38,10 +38,17 @@
                         color: #fff
                         margin: 0
                         height: 100%
+                        &:hover .name
+                            text-shadow: 2px 3px 8px gold, 0 0 1px $gold
+                        .name
+                            transition: all .4s ease-out
+                            color: gold
+                            font-size: 4.5rem   
+                            font-family: "Heimdall" , serif
 
 .about .heading, .heading-close
     font-size: 2.5rem
-    animation: heading 3s ease-in-out 
+    animation: heading 3s ease-in-out a
     z-index: 2
 
 
